@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>aprendendo js</title>
+</head>
+
+<body>
+    <script>
+
+        //desafio 01
+
+        const endereco = {
+            rua: "agronomando rangel",
+            numero: 301,
+            bairro: "centro",
+            cidade: "Boa viagem",
+            uf: "CE"
+        }
+
+        console.log("O usuario mora em " + endereco.cidade +
+            "/" + endereco.uf + " no bairro " + endereco.bairro +
+            " na " + endereco.rua)
+
+        //desafio 02
+
+        pares = (x, y) => {
+            let par;
+            while (x <= y) {
+                if (x % 2 == 0) {
+                    console.log("o numero " + x + " é par!")
+                }
+                x++
+            }
+        }
+
+        pares(32, 321)
+
+        // desafio 03
+
+        function temHabilidade(Skills) {
+            var js = skills.indexOf("javascript")
+            if (js >= 0)
+                console.log("true")
+            else {
+                console.log("false")
+            }
+        }
+
+        var skills = ["javascript", "reactjs", "react native"];
+        temHabilidade(skills);
+
+        //desafio 04
+
+        function experiencia(anos) {
+
+            switch (anos) {
+                case 7:
+                    console.log("Jedi Master")
+                    break
+                case 6:
+                case 5:
+                case 4:
+                    console.log("avancado")
+                    break
+
+                case 3:
+                case 2:
+                    console.log("intermediario")
+                    break
+                case 1:
+                    console.log("Iniciante")
+                    break
+                default:
+                    alert("caractere invalido!")
+            }
+
+        }
+        var anosEstudo = 3
+        experiencia(anosEstudo)
+
+        //desafio 5
+
+        var usuarios = [
+            {
+                nome: "Reubber",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gidas",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+
+        function percorrerArray(User) {
+            for (let value of usuarios) {
+                console.log("O " + value.nome + ' possui as habilidades: ' + value.habilidades)
+            }
+        }
+        percorrerArray(usuarios)
+
+    </script>
+
+</body>
+
+</html>

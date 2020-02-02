@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulando elementos</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        let linkElement = document.createElement('a')
+
+        linkElement.setAttribute('href', 'http://google.com')
+
+        var textElement = document.createTextNode('acessar  o google')
+        linkElement.appendChild(textElement)
+
+        var containerElement = document.querySelector('#app')
+        containerElement.appendChild(linkElement)
+    </script>
+
+</body>
+
+</html>
