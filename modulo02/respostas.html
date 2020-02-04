@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicios do desafio</title>
+
+</head>
+
+<body>
+    <button id="new">Novo quadrado</button>
+
+    <div id="squares"></div>
+
+    <ul>
+    </ul>
+
+    <input type="text" name="nome">
+    <button class='botao' onClick="adicionar()">Adicionar</button>
+
+    <script>
+
+        //01
+
+        let btnElement = document.getElementById('new')
+        var squareElement = document.getElementById('squares')
+
+        btnElement.onclick = function () {
+
+            var square = document.createElement('div')
+            squareElement.style.width = '100px'
+            squareElement.style.height = '100px'
+            squareElement.style.backgroundColor = '#F00'
+
+            squareElement.appendChild(square)
+
+        }
+
+        //02
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF"
+            var color = '#'
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        squareElement.onmouseover = function () {
+            var newColor = getRandomColor();
+            squareElement.style.backgroundColor = newColor
+        }
+
+        //03
+
+        var names = ['Reubber', 'Raul', 'Ryan']
+        var ulistElement = document.querySelector('ul')
+        var inputElement = document.querySelector('input')
+
+        function addItem(text) {
+            var liElement = document.createElement('li');
+            var textElement = document.createTextNode(text)
+
+            liElement.appendChild(textElement)
+            ulistElement.appendChild(liElement)
+        }
+
+        //04
+
+        function adicionar() {
+            addItem(inputElement.value)
+            inputElement.value = ''
+        }
+
+        for (nome of names) {
+            addItem(nome);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
