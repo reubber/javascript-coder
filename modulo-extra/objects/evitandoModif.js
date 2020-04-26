@@ -1,23 +1,25 @@
 // Object.preventExtensions
 const produto = Object.preventExtensions({
-    nome: 'Qualquer', preco: 1.99, tag: 'promocao'
-})
+  nome: "Qualquer",
+  preco: 1.99,
+  tag: "promocao",
+});
 
-console.log('Extensivel:', Object.isExtensible(produto))
+console.log("Extensivel:", Object.isExtensible(produto));
 
-produto.nome = 'borracha'
-produto.descricao = 'borracha escolar branca'
-delete produto.tag
-console.log(produto)
+produto.nome = "borracha";
+produto.descricao = "borracha escolar branca";
+delete produto.tag;
+console.log(produto);
 
 // Object.seal
 
-const pessoa = { nome: 'juliano', idade: 35 }
-Object.seal(pessoa)
+const pessoa = { nome: "juliano", idade: 35 };
+Object.seal(pessoa);
 
-pessoa.sobrenome = 'Silva'
-delete pessoa.nome
-pessoa.idade = 29
-console.log(pessoa)
+pessoa.sobrenome = "Silva";
+delete pessoa.nome;
+pessoa.idade = 29;
+console.log(pessoa);
 
 // Object.freeze
